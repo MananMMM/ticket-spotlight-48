@@ -19,7 +19,7 @@ const Dashboard = () => {
     }
   }, [user, navigate]);
 
-  const handleCancelBooking = (bookingId: number) => {
+  const handleCancelBooking = (bookingId) => {
     updateBookingStatus(bookingId, 'cancelled');
     toast({
       title: "Booking cancelled",
@@ -32,7 +32,7 @@ const Dashboard = () => {
     return null;
   }
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status) => {
     switch (status) {
       case 'confirmed':
         return 'bg-green-500/10 text-green-400 border-green-500/20';

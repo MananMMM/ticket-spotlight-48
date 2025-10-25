@@ -8,8 +8,8 @@ import { Search, SlidersHorizontal } from "lucide-react";
 
 const Events = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [categoryFilter, setCategoryFilter] = useState<string>("all");
-  const [sortBy, setSortBy] = useState<string>("date");
+  const [categoryFilter, setCategoryFilter] = useState("all");
+  const [sortBy, setSortBy] = useState("date");
 
   const filteredEvents = mockEvents
     .filter(event => {

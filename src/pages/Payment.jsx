@@ -14,7 +14,7 @@ const Payment = () => {
   const { toast } = useToast();
   const user = getCurrentUser();
   
-  const [paymentMethod, setPaymentMethod] = useState<string>('credit_card');
+  const [paymentMethod, setPaymentMethod] = useState('credit_card');
   const [isProcessing, setIsProcessing] = useState(false);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Payment = () => {
     setTimeout(() => {
       const payment = addPayment({
         booking_id: booking.booking_id,
-        payment_method: paymentMethod as any,
+        payment_method: paymentMethod,
         payment_status: 'completed'
       });
 
